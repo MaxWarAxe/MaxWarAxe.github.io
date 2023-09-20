@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Максим Киселев</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="background-rect" id="start">
+            <div class="nameblock">
+                <font class="name">Максим</font> <font class="surname">Киселев</font>
+            </div>
+            <nav>
+                <ui class="nav-list" style="display: inline;">
+                    <li><div style="cursor: pointer;" onclick="GotoContact()">Контакты</div></li>
+                    <li><div style="cursor: pointer;" onclick="GotoWork1()">Работы</div></li>
+                    <li> <div style="cursor: pointer;" onclick="GotoAbout()">Обо мне</div></li>
+                </ui>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <div class="welcome-section-overlap">
+                <p class="welcome-text-h1">Добро пожаловать на мой сайт</p>
+                <p class="welcome-text"> Здесь вы можете почитать информацию обо мне, а также посмотреть мои работы. Еще можете написать мне сообщение. <3</p>
+                <div class="goto-about" style="cursor: pointer;" onclick="GotoAbout()">
+                    <p class="goto-about-text">УЗНАТЬ БОЛЬШЕ</p>
+                    <img class="arrow-right" src="arrow_forward.png" alt=">">
+                </div>
+            </div>
+        </section>
+        <section class="about-me-1" id="about-me-1">
+            <div class="about-me-container">
+                <p class="about-me-header"><span class="numer">01/02</span> ОБО МНЕ</p>
+                <p class="numer about" style="margin-bottom: 150px;">Меня зовут Максим Киселёв, я учусь в ЛГТУ на направлении “Программная инженерия”. Люблю программирование. За прошедших курса я узнал много нового.</p>
+                <div class="goto-about goto-perks" style="cursor: pointer;" onclick="GotoPerks()">
+                    <p class="goto-about-text goto-perks-text" >ОБРАЗОВАНИЕ И НАВЫКИ</p>
+                    <img class="arrow-right" src="arrow_forward.png" alt=">">
+                </div>
+            </div>
+            <img class="avatar-image" src="avatar.png" alt="это я кстати">
+            
+        </section>
+        <section class="about-me-1 about-me-2" id="perks">
+                <p class="about-me-header about-me-header-2" style="margin-bottom: 200px;"><span class="numer">02/02</span> ОБО МНЕ</p>
+                <div class="perks-container">
+                    <div class="img-and-text">
+                        <img src="verified.png" alt="galochka" style="margin-bottom: 50px;">
+                        <p class="numer about blue-h" style="margin-bottom: 50px;">Образование</p>
+                        <p class="numer about" style="width: 450px;">Университет ЛГТУ 3 курс. Направление “Программная инженерия”. </p>
+                    </div>
+                    <div class="img-and-text">
+                        <img src="stars.png" alt="star" style="margin-bottom: 50px;">
+                        <p class="numer about blue-h" style="margin-bottom: 50px;">Навыки</p>
+                        <p class="numer about" style="width: 450px;">Умею программировать на языках: С++, Java. </p>
+                        <p class="numer about" style="width: 450px;">Владею технологиями: QT, Godot, html, css </p>
+                        <p class="numer about" style="width: 450px;">Уверенный пользователь программ: Adobe Photoshop CS6, Blender, Visual Studio. </p>
+                    </div>
+                    <div class="img-and-text">
+                        <img src="tag_faces.png" alt="face" style="margin-bottom: 50px;">
+                        <p class="numer about blue-h" style="margin-bottom: 50px;">Другое</p>
+                        <p class="numer about" style="width: 450px;">Владею английским языком на Intermediate уровне.</p>
+                        <p class="numer about" style="width: 450px;">Обладаю высокими навыками коммуникации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work-chooser">
+                <div class="work-chooser-head">
+                    <p class="about-me-header" style="margin-bottom: 0px;"><span class="numer">01/03</span> РАБОТЫ</p>
+                </div>
+                <div class="work-choose-section">
+                    <div class="work-choose-overlap">
+                        <img src="arrow_back.png" alt="">
+                        <p class="about-me-header" style="margin-bottom: 0px;">ПРОГРАММА ДЕМОНСТРИРУЮЩАЯ ЧИСЛЕННЫЕ МЕТОДЫ</p>       
+                        <img src="arrow_forward.png" alt="">
+                        <p class="numer about" style="width: 900px; margin-top: 200px; text-align: start;">Эта программа была написана на 2 курсе. Она демонстрирует численные методы в удобном графическом виде</p>
+                    </div>
+                </div>
+                <div class="work-footer">
+                    <p class="goto-about-text" style="width:200px; cursor: pointer;" onclick="GotoWork1()">РАБОТЫ ПОДРОБНЕЕ</p>
+                    <img class="arrow-right" src="arrow_forward.png" alt=">">
+                </div>
+        </section>
+        <section class="work" id="work1">
+            <div class="work1-image">
+                <img src="work1.png" alt="work1" style="display:inline;">
+            </div>
+            
+            <div class="work1-info">
+                <p class="about-me-header" style="margin-bottom: 100px;display: block; font-size:48px;"><span class="numer">01/03</span> РАБОТЫ</p>
+                <p class="about-me-header" style="margin-bottom: 200px;display: inline-block; font-size:48px;">ЧИСЛЕННЫЕ МЕТОДЫ</p>
+                <p class="numer about" style="margin-bottom: 5px;">Эта программа была написана на 2 курсе. Она демонстрирует численные методы в удобном графическом виде.</p>
+                    <p class="numer about" style="margin-bottom: 5px; color:rgba(86, 125, 177, 1);">Численные методы представленные в программе:</p>
+                    
+                <ul class="method-list">
+                    <li>Метод Лагранжа</li>
+                    <li>Метод Ньютона</li>
+                    <li>Квадратичный сплайн</li>
+                    <li>Кубический сплайн</li>
+                    <li>Линейная аппроксимация</li>
+                    <li>Схема Эйткена</li>
+                    <li>Интегрирование методом прямоугольников</li>
+                </ul>
+                <p class="numer about" style="margin-bottom: 5px; color:rgba(86, 125, 177, 1);">Использованные инструменты: </p>
+                <p class="numer about" style="margin-bottom: 5px;">Язык: С++</p>
+                <p class="numer about" style="margin-bottom: 5px;">Фреймворк: QT</p>
+                <p class="numer about" style="margin-bottom: 5px;">IDE: Qt Creator</p>
+            </div>
+        </section>
+        <section class="contact-container" id="contact-container">
+            <div class="contact-header">
+                <p class="about-me-header" style="margin-bottom: 0px;display: block; font-size:48px;"><span class="numer">01/04</span> КОНТАКТЫ</p>
+            </div>
+            
+    
+            <div class="contact-sender">
+                <p class="about-me-header" style="margin-bottom: 50px;display: block; font-size:48px;">ОТПРАВКА СООБЩЕНИЯ</p>
+                <p class="about-me-header" style="margin-bottom: 100px;display: block; font-size:32px; font-weight: 300;">Оставьте заявку прямо сейчас!</p>
+                <form action="#" name="submit-to-google-sheet">
+                    <div style="display: inline-block;">
+                        <label for="mails">Ваш E-mail</label>
+                        <input type="text" id="email" name="email" placeholder="" required>
+                    </div>
+                    <div style="display: inline-block;">
+                        <label for="names">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="">
+                    </div>
+                    <div style="display: block;">
+                        <label for="messages">Сообщение</label>
+                        <textarea type="text" id="message" name="message" placeholder=""> </textarea>
+                    </div>
+                    <button type="submit" style="background: none; border: none; cursor: pointer;">
+                        <p class="about-me-header" style="margin-top:100px;display: inline-block; font-size:32px;margin-bottom: 0px; font-weight: bold; color: rgba(93, 138, 197, 1);">ОТПРАВИТЬ</p>
+                    </button>
+                </form>
+
+            </div>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzB7dmcgbRgjGWv7RmqOGG1J-Z4NDr17gja80r3RsbYAtpwNthQTVxz8ZF3YWgHCt5d/exec'
+                const form = document.forms['submit-to-google-sheet']
+                
+                form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+
+            <div class="contact-content">
+                <p class="about-me-header" style="margin-bottom: 0px;display: block; font-size:48px;">СОЦ. СЕТИ</p>
+                <p class="about-me-header" style="margin-bottom: 0px;display: block; font-size:48px;"><span class="numer">Онлайн 24/7... Практически</span></p>
+                <img src="./contact-icons/discord-icon.png" alt="">
+                <img src="./contact-icons/steam-icon.png" alt="">
+                <img src="./contact-icons/osu-icon.png" alt="">
+                <img src="./contact-icons/mail-icon.png" alt="">
+                <img class="submit" style="cursor: pointer;" onclick="YTClick()" src="./contact-icons/youtube-icon.png" alt="">
+                <img src="./contact-icons/vk-icon.png" alt="">
+                <div style="height:230px"></div>
+                <div class="goto-about" onclick="GotoStart()">
+                    <p class="goto-about-text" style="font-size: 36px; cursor: pointer;">НАВЕРХ</p>
+                    <img style="margin: 0;"src="arrow-up.png" alt=">">
+                </div>
+
+            </div>
+        </section>
+        <section class="video-section" id="video-section">
+              
+        </section>
+    </main>
+    <footer>
+        <font class="name footername";">Максим</font> <font class="surname" style=" display: inline;">Киселев</font>
+        <font class="name footername" style="float:right;">©️ 2023</font> 
+    </footer>
+    
+</body>
+
+</html>
