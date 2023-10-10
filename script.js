@@ -17,6 +17,10 @@ function GotoWork1(){
     .scrollIntoView({ behavior: "smooth" });
 }
 
+function GotoGame(){
+    document.location.href = "webchik/Game.html"
+}
+
 function GotoStart(){
     document
     .getElementById("start")
